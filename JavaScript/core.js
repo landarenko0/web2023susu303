@@ -28,7 +28,7 @@ function sumTo(n) {
 function recSumTo(n) {
     if (n <= 0) return 0;
 
-    return n + recSumTo(n-1);
+    return n + recSumTo(n - 1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -66,6 +66,7 @@ function fibonacci(n) {
  */
 function getOperationFn(initialValue, operatorFn) {
     if (operatorFn == null) return () => initialValue;
+    
     return (number) => {
         initialValue = operatorFn(initialValue, number);
         return initialValue;
@@ -90,6 +91,7 @@ function getOperationFn(initialValue, operatorFn) {
  */
 function sequence(start = 0, step = 1) {
     start -= step;
+    
     return () => {
         start += step;
         return start
