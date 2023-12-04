@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>TODO</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <h4>Список задач:</h4>
+    <!--Блок для списка дел-->
+    <div id="notes">
+
+    </div>
+    <button onclick="openForm()">Добавить новую запись</button>
+    <div class="popup">
+        <div class="popup__container">
+          <div class="popup__wrapper">
+            <div id="tmp">
+              <form id="form" autocomplete="off" onsubmit="return onSubmit();">
+                <p>
+                    <label>Заголовок:</label>
+                    <input type="text" id="title">
+                </p>
+                <p>
+                    <label>Описание:</label>
+                    <input type="text" id="description">
+                </p>
+                <p>
+                    <label>ID пользователя:</label>
+                    <select id="ids">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit" id="addNote">Сохранить</button>
+                    <button type="reset" id="reset" onclick="onReset()">Отмена</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <p>
+        <button id="editButton" onclick="openFormForEdit()">Редактировать</button>
+        <select id="idsToEdit"></select>
+    </p>
+    <p>
+        <button id="deleteButton" onclick="deleteNote()">Удалить</button>
+        <select id="idsToDelete"></select>
+    </p>
+    <div id="preloader" class="hidden"></div>
+</body>
+</html>

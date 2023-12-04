@@ -1,0 +1,80 @@
+#tmp {
+    display: none;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+  
+#tmp.open {
+    display: block;
+}
+  
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.5);
+    transition: all 0.5s ease;
+    display: none;
+}
+  
+.popup_open {
+    display: block;
+}
+  
+.popup__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    max-width: 588px;
+    width: 100%;
+}
+
+.popup__wrapper {
+    padding: 40px;
+}
+
+.note {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: 150px;
+    padding-left: 10px;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fbfbfb url('loader.gif') no-repeat center center;
+}
+  
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s 0.2s, opacity 0.2s linear;
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
